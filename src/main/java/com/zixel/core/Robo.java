@@ -3,8 +3,10 @@ package com.zixel.core;
 public class Robo {
     private String nome;
     private boolean ligado = false;
+    private Motor motor;
     public Robo(String nome){
         this.nome = nome;
+        this.motor = new Motor();
     }
     public void ligar(){
         if (this.ligado){
