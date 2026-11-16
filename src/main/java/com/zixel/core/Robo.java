@@ -17,10 +17,12 @@ public class Robo {
     public boolean isLigado(){
         return this.ligado;
     }
+
     public void desligar(){
         if(!this.ligado){
-            throw new IllegalStateException("O robo ja esta desligado");
+            throw new IllegalStateException("erro");
         }
+        motor.definirVelocidade(0);
         this.ligado = false;
     }
     public void definirVelocidade(int velocidadeEscolhida) {
@@ -30,6 +32,6 @@ public class Robo {
         motor.definirVelocidade(velocidadeEscolhida);
     }
     public int getVelocidade(){
-        return getVelocidade();
+        return motor.getVelocidade();
     }
 }
