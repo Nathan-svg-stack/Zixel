@@ -23,4 +23,8 @@ public class Robo {
         }
         this.ligado = false;
     }
+    public void definirVelocidade(int velocidadeEscolhida) {
+
+
+    }
 }
