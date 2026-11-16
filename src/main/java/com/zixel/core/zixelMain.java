@@ -3,7 +3,6 @@ package com.zixel.core;
 public class zixelMain {
     public static void main(String[] args) {
         Robo robo = new Robo("Zixel");
-        //ligue o robô, defina a velocidade como 30, desligue-o e consulte getVelocidade().
         try {
             robo.desligar();
             System.out.println("ligou certinho");
