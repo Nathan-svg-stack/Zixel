@@ -24,7 +24,12 @@ public class Robo {
         this.ligado = false;
     }
     public void definirVelocidade(int velocidadeEscolhida) {
-
-
+        if(!isLigado()){
+            throw new IllegalStateException("o robo esta desligado, por favor ligar antes, pera mas se ta desligado como eu sei?");
+        }
+        motor.definirVelocidade(velocidadeEscolhida);
+    }
+    public int getVelocidade(){
+        return getVelocidade();
     }
 }
