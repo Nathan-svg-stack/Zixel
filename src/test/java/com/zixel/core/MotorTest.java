@@ -20,7 +20,7 @@ public class MotorTest {
 
         }
     @Test
-    void DeveAceitarVelocidadeAbaixoDoLimite(){
+    void DeveRejeitarVelocidadeAbaixoDoLimite(){
        assertThrows(IllegalArgumentException.class, () ->{
            motor.definirVelocidade(-101);
        });}
