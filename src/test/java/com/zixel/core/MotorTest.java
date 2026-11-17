@@ -14,15 +14,15 @@ public class MotorTest {
                 motor.definirVelocidade(150);
             });}
     @Test
-    void deveNaoIniciarComVelocidadeZero(){
-        motor.definirVelocidade(99);
+    void deveIniciarComVelocidadePositiva(){
+        motor.definirVelocidade(99);o
         assertEquals(99, motor.getVelocidade());
 
         }
     @Test
     void DeveAceitarVelocidadeAbaixoDoLimite(){
        assertThrows(IllegalArgumentException.class, () ->{
-           motor.definirVelocidade(300);
+           motor.definirVelocidade(-101);
        });}
     @Test
     public void verificarSeACeitaMenosCinquenta(){
