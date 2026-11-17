@@ -42,5 +42,24 @@ public class RoboTest {
             robo.definirVelocidade(50);
         });
     }
+    @Test
+    void deveIniciarSemEstarSeMovimentando(){
+        robo.ligar();
+        assertFalse(robo.isMovendo());
+    }
+    @Test
+    void deveComecarMovimentarComVelocidadeDiferenteDeZero(){
+        robo.ligar();
+        robo.definirVelocidade(50);
+        assertTrue(robo.isMovendo());
+    }
+    @Test
+    void pararDeMovimentarRecebendoZero(){
+        robo.ligar();
+        robo.definirVelocidade(50);
+        assertTrue(robo.isMovendo());
+        robo.definirVelocidade(0);
+        assertFalse(robo.isMovendo());
+    }
     }
 
