@@ -15,7 +15,7 @@ public class MotorTest {
             });}
     @Test
     void deveIniciarComVelocidadePositiva(){
-        motor.definirVelocidade(99);o
+        motor.definirVelocidade(99);
         assertEquals(99, motor.getVelocidade());
 
         }
