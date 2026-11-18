@@ -29,6 +29,7 @@ public class RoboTest {
         robo.desligar();
         assertFalse(robo.isLigado());
         assertEquals(0, robo.getVelocidade());
+        assertFalse(robo.isMovendo());
     }
     @Test
     void tentarDesligarDesligado(){
