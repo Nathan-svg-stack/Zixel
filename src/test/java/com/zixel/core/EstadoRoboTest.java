@@ -23,5 +23,6 @@ public class EstadoRoboTest {
         assertThrows(IllegalArgumentException.class, ()->{
             robo.definirVelocidade(150);
         });
+        System.out.println(robo.getVelocidade());
     }
 }

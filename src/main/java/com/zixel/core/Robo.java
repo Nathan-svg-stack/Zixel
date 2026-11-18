@@ -9,7 +9,7 @@ public class Robo {
         this.motor = new Motor();
     }
     public void ligar(){
-        if (this.estadoRobo == EstadoRobo.PARADO){
+        if (this.estadoRobo != EstadoRobo.DESLIGADO){
             throw new IllegalStateException("Robo ja esta ligado");
         }
             this.estadoRobo = EstadoRobo.PARADO;
