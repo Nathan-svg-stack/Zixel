@@ -23,6 +23,18 @@ public class EstadoRoboTest {
         assertThrows(IllegalArgumentException.class, ()->{
             robo.definirVelocidade(150);
         });
-        System.out.println(robo.getVelocidade());
+        assertEquals(EstadoRobo.MOVENDO, robo.getEstadoRobo());
+        assertEquals(50, robo.getVelocidade());
+    }
+    @Test
+    void rejeitarLigarMovendo(){
+        robo.ligar();
+        robo.definirVelocidade(40);
+        assertEquals(EstadoRobo.MOVENDO, robo.getEstadoRobo());
+        assertThrows(IllegalStateException.class, ()-> {
+            robo.ligar();
+        });
+        assertEquals(EstadoRobo.MOVENDO, robo.getEstadoRobo());
+        assertEquals(40, robo.getVelocidade());
     }
 }
