@@ -3,10 +3,11 @@ package com.zixel.core;
 public class Robo {
     private String nome;
     private EstadoRobo estadoRobo = EstadoRobo.DESLIGADO;
-    private Motor motor;
-    public Robo(String nome){
+    private MotorControlavel motor;
+    public Robo(String nome, MotorControlavel motorcontrolavel){
+        this.motor = motorcontrolavel;
         this.nome = nome;
-        this.motor = new Motor();
+
     }
     public void ligar(){
         if (this.estadoRobo != EstadoRobo.DESLIGADO){
