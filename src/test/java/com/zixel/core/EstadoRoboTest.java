@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 public class EstadoRoboTest {
-    Robo robo = new Robo("zixel");
+    Robo robo = new Robo("zixel", new MotorHidraulico());
 
     @Test
     void deveRetornarParado(){
