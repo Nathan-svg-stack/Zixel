@@ -1,6 +1,6 @@
 package com.zixel.core;
 
-    public class Motor implements MotorControlavel{
+    public class MotorEletrico implements MotorControlavel{
     private int velocidade = 0;
     private static final int VELOCIDADE_MAXIMA = 100;
     private static final int VELOCIDADE_MINIMA = -100;

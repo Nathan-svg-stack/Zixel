@@ -62,5 +62,11 @@ public class RoboTest {
         robo.definirVelocidade(0);
         assertFalse(robo.isMovendo());
     }
+    @Test
+    void deveRejeitarMotorNulo() {
+        assertThrows(NullPointerException.class, ()->{
+           new Robo("zixelq", null);
+        });
     }
+}
 

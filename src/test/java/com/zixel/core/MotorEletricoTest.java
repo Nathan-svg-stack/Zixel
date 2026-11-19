@@ -2,37 +2,37 @@ package com.zixel.core;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-public class MotorTest {
-    Motor motor = new Motor();
+public class MotorEletricoTest {
+    MotorEletrico motorEletrico = new MotorEletrico();
     @Test
     void deveIniciarComVelocidadeZero(){
-        assertEquals(0, motor.getVelocidade());
+        assertEquals(0, motorEletrico.getVelocidade());
     }
     @Test
     void deveRejeitarVelocidadeAcimaDoLimite(){
             assertThrows(IllegalArgumentException.class,  () -> {
-                motor.definirVelocidade(150);
+                motorEletrico.definirVelocidade(150);
             });}
     @Test
     void deveIniciarComVelocidadePositiva(){
-        motor.definirVelocidade(99);
-        assertEquals(99, motor.getVelocidade());
+        motorEletrico.definirVelocidade(99);
+        assertEquals(99, motorEletrico.getVelocidade());
 
         }
     @Test
     void DeveRejeitarVelocidadeAbaixoDoLimite(){
        assertThrows(IllegalArgumentException.class, () ->{
-           motor.definirVelocidade(-101);
+           motorEletrico.definirVelocidade(-101);
        });}
     @Test
     public void verificarSeACeitaMenosCinquenta(){
-        motor.definirVelocidade(-50);
-        assertEquals(-50, motor.getVelocidade());
+        motorEletrico.definirVelocidade(-50);
+        assertEquals(-50, motorEletrico.getVelocidade());
     }
     @Test
     void aceitarCem(){
-        motor.definirVelocidade(100);
-        assertEquals(100, motor.getVelocidade());
+        motorEletrico.definirVelocidade(100);
+        assertEquals(100, motorEletrico.getVelocidade());
     }
         }
 

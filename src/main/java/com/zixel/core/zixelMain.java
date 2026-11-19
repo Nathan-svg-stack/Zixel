@@ -2,7 +2,7 @@ package com.zixel.core;
 
 public class zixelMain {
     public static void main(String[] args) {
-        Robo robo = new Robo("Zixel", new Motor());
+        Robo robo = new Robo("Zixel", new MotorEletrico());
         Robo robo1 = new Robo("atom", new MotorHidraulico());
         robo.ligar();
         robo1.ligar();

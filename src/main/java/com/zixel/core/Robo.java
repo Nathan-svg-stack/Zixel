@@ -1,11 +1,12 @@
 package com.zixel.core;
+import java.util.Objects;
 
 public class Robo {
     private String nome;
     private EstadoRobo estadoRobo = EstadoRobo.DESLIGADO;
     private MotorControlavel motor;
     public Robo(String nome, MotorControlavel motorcontrolavel){
-        this.motor = motorcontrolavel;
+        this.motor = Objects.requireNonNull(motorcontrolavel, "O Motor nao pode ser nulo, por favor inserir um motor valido");
         this.nome = nome;
 
     }
